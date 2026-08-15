@@ -1,0 +1,1 @@
+when I have open Dev tools that time login -fluent take time 1.25 second and 21 request , 810 KB transferred, 3.1MB resources, finish 2.1 min 
