@@ -1,0 +1,58 @@
+CREATE TABLE Vendor (
+    vendorID INT PRIMARY KEY,
+    vendorName VARCHAR(100),
+    contactInfo VARCHAR(200),
+    status VARCHAR(50)
+);
+
+CREATE TABLE Menu (
+    menuID INT PRIMARY KEY,
+    vendorID INT,
+    itemName VARCHAR(100),
+    price DECIMAL(10,2),
+    availability BOOLEAN,
+    FOREIGN KEY (vendorID) REFERENCES Vendor(vendorID)
+);
+
+CREATE TABLE Orders (
+    orderID INT PRIMARY KEY,
+    userID INT,
+    vendorID INT,
+    orderDate DATETIME,
+    status VARCHAR(50)
+);
+
+CREATE TABLE OrderItems (
+    orderItemID INT PRIMARY KEY,
+    orderID INT,
+    menuID INT,
+    quantity INT,
+    FOREIGN KEY (orderID) REFERENCES Orders(orderID),
+    FOREIGN KEY (menuID) REFERENCES Menu(menuID)
+);
+
+CREATE TABLE Delivery (
+    deliveryID INT PRIMARY KEY,
+    orderID INT,
+    driverID INT,
+    deliveryStatus VARCHAR(50),
+    estimatedTime DATETIME,
+    FOREIGN KEY (orderID) REFERENCES Orders(orderID)
+);
+
+CREATE TABLE Payments (
+    paymentID INT PRIMARY KEY,
+    orderID INT,
+    amount DECIMAL(10,2),
+    method VARCHAR(50),
+    status VARCHAR(50),
+    FOREIGN KEY (orderID) REFERENCES Orders(orderID)
+);
+
+CREATE TABLE Tracking (
+    trackingID INT PRIMARY KEY,
+    orderID INT,
+    currentStatus VARCHAR(50),
+    lastUpdated DATETIME,
+    FOREIGN KEY (orderID) REFERENCES Orders(orderID)
+);
