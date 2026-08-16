@@ -1,0 +1,52 @@
+<mxfile host="Electron" agent="ChatGPT">
+  <diagram id="campuseats-service-design" name="CampusEats Service Design">
+    <mxGraphModel dx="1244" dy="784" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;u&gt;CampusEats — Service Design Benchmark&lt;/u&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="45" width="500" x="300" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="menu" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=2;fontSize=12;spacing=10;verticalAlign=middle;" value="MENU SERVICE&lt;br&gt;&lt;b&gt;Team member:&lt;/b&gt;&amp;nbsp; Sandeep Parmar&lt;br&gt;&lt;br&gt;&lt;b&gt;Capability:&lt;/b&gt; Browse menus&lt;br&gt;&lt;br&gt;&lt;b&gt;DATA OWNED&lt;/b&gt;&lt;br&gt;• Menus&lt;br&gt;&amp;nbsp;menuID&lt;br&gt;vendorID&lt;br&gt;itemName&lt;br&gt;&amp;nbsp;price" vertex="1">
+          <mxGeometry height="190" width="250" x="50" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vendor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=2;fontSize=12;spacing=10;verticalAlign=middle;" value="VENDOR MANAGEMENT SERVICE&lt;br&gt;&lt;b&gt;Team member:&lt;/b&gt;&amp;nbsp; Vivek Kumar&lt;br&gt;&lt;br&gt;&lt;b&gt;DATA OWNED&lt;/b&gt;&lt;br&gt;• Vendor&lt;br&gt;&amp;nbsp;vendorID&lt;br&gt;&amp;nbsp;vendorName&lt;br&gt;&amp;nbsp;contactsInfo&lt;br&gt;&amp;nbsp;status&lt;br&gt;&amp;nbsp;availability" vertex="1">
+          <mxGeometry height="210" width="250" x="50" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="order" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=2;fontSize=12;spacing=10;verticalAlign=middle;" value="ORDER SERVICE&lt;br&gt;&lt;b&gt;Team member:&lt;/b&gt;&amp;nbsp; Dipesh Kumar&lt;br&gt;&lt;br&gt;&lt;b&gt;Capabilities:&lt;/b&gt; Place orders; Accept orders&lt;br&gt;&lt;br&gt;&lt;b&gt;DATA OWNED&lt;/b&gt;&lt;br&gt;• Orders&lt;br&gt;&amp;nbsp;Order_Items&lt;br&gt;&amp;nbsp;orderID&lt;br&gt;&amp;nbsp;orderDate&lt;br&gt;&amp;nbsp;status&lt;br&gt;&amp;nbsp;userID&lt;br&gt;&amp;nbsp;vendorID&lt;br&gt;&amp;nbsp;orderItemID&lt;br&gt;&amp;nbsp;menuID&lt;br&gt;&amp;nbsp;Quantity" vertex="1">
+          <mxGeometry height="250" width="290" x="390" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="payment" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=2;fontSize=12;spacing=10;verticalAlign=middle;" value="PAYMENT SERVICE&lt;br&gt;&lt;b&gt;Team member:&lt;/b&gt;&amp;nbsp; Suraj kumar Saw&lt;br&gt;&lt;br&gt;&lt;b&gt;Capability:&lt;/b&gt; Make payments&lt;br&gt;&lt;br&gt;&lt;b&gt;DATA OWNED&lt;/b&gt;&lt;br&gt;• Payment&lt;br&gt;&amp;nbsp;paymentID&lt;br&gt;&amp;nbsp;amount&lt;br&gt;&amp;nbsp;status&lt;br&gt;&amp;nbsp;method&lt;br&gt;&amp;nbsp;orderID" vertex="1">
+          <mxGeometry height="190" width="250" x="770" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="delivery" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=2;fontSize=12;spacing=10;verticalAlign=middle;" value="DELIVERY SERVICE&lt;br&gt;&lt;b&gt;Team member:&lt;/b&gt;&amp;nbsp; Suraj Kumar Saw&lt;br&gt;&lt;br&gt;&lt;b&gt;Capability:&lt;/b&gt; Deliver food&lt;br&gt;&lt;br&gt;&lt;b&gt;DATA OWNED&lt;/b&gt;&lt;br&gt;• Delivery&lt;br&gt;&amp;nbsp;deliveryID&lt;br&gt;&amp;nbsp;estimatedTime&lt;br&gt;&amp;nbsp;deliveryStatus&lt;br&gt;&amp;nbsp;driverID&lt;br&gt;&amp;nbsp;orderID" vertex="1">
+          <mxGeometry height="210" width="250" x="770" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="tracking" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=2;fontSize=12;spacing=10;verticalAlign=middle;" value="TRACKING SERVICE&lt;br&gt;&lt;b&gt;Team member: Dipesh Kumar&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Capability:&lt;/b&gt; Track deliveries&lt;br&gt;&lt;br&gt;&lt;b&gt;DATA OWNED&lt;/b&gt;&lt;br&gt;• Tracking&lt;br&gt;trackingID&lt;br&gt;&amp;nbsp;orderID&lt;br&gt;&amp;nbsp;currentStatus&lt;br&gt;&amp;nbsp;lastUpdated" vertex="1">
+          <mxGeometry height="190" width="250" x="770" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="order" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;" target="menu" value="getMenuItem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="order" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;" target="vendor" value="checkVendorAvailability">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="order" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;" target="payment" value="makePayment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="order" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;" target="delivery" value="createDelivery">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="delivery" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;" target="order" value="getOrder">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="delivery" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;" target="tracking" value="updateTracking">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="tracking" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;" target="delivery" value="getDeliveryStatus">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
