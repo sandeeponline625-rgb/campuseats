@@ -1,0 +1,13 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:uni="urn:unipay:payments">
+  <soap:Header>
+    <uni:auth token="CE-MERCHANT-KEY"/>
+  </soap:Header>
+  <soap:Body>
+    <uni:charge>
+      <cardToken>tok9f2c</cardToken>
+      <amount>300</amount>
+      <currency>INR</currency>
+    </uni:charge>
+  </soap:Body>
+</soap:Envelope>
